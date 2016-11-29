@@ -18,8 +18,6 @@ To repozytorium posiada następujące programy:
 - **_stack_**: implementacja stosu wraz z testami
 - **_test\_class_**: klasa importowana przez powyższe projekty, służy do tworzenia testów jednostkowych.
 
-Powyższe projekty często korzystają z dwóch innych projektów tj "test_class" i "helpers", dlatego polecam nie rozdzielać projektów.
-
 **2. Windows API Projects**
 
 Ta część repozytorium posiada dwa programy napisane w Visual Studio Community 2015:
