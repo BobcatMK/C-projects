@@ -1,0 +1,31 @@
+employeeType = Manager
+firstName = Robert
+lastName = Kowalski
+salary = 6000
+meetingsPerWeek = 43
+holidaysPerYear = 123
+
+employeeType = Engineer
+firstName = Patryk
+lastName = Wczorajszy
+salary = 4000
+knowsCpp = 0
+yearsOfExp = 2
+engineerType = Software
+
+employeeType = Engineer
+firstName = Miyagi
+lastName = Tanaka
+salary = 12000
+knowsCpp = 0
+yearsOfExp = 10
+engineerType = Software
+
+employeeType = Engineer
+firstName = asdf
+lastName = asdf
+salary = 233
+knowsCpp = 0
+yearsOfExp = 10
+engineerType = asdf
+
