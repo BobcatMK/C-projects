@@ -1,0 +1,127 @@
+Needed classes:
+1. Sprite (gPuck, gPaddlePlayer1, gPaddlePlayer2)
+2. Backbuffer (to fix overdraw effect)
+3. Vec2 (for Sprite class as dependecy)
+4. Circle (for Sprite class as dependency)
+5. HumanPlayer
+6. AIPlayer
+
+Needed namespaces:
+1. AppConsts - here we hold application constants
+2. AppInitializers - most important variables/instances that we create at the start of the program. Later those "initializers" are changeable
+3. PuckCollisionDetection - this namespace will include all methods needed by puck sprite to perform proper collision detection
+4. GameController - here we will hold all logic that will be responsible for rendering menu and all of its options
+
+Development dependencies:
+- Test namespace - this is my personal testing framework, it allows us to make unit tests.
+
+User story:
+1. I turn on the Pong Game
+2. I can see menu with four options:
+a) New Game
+	aa) Human(P1) vs AI
+		Choose AI difficulty (radio buttons):
+		aaa) Easy
+		aab) Medium
+		aac) Hard
+		Choose side you want to play on (radio buttons):
+		aad) Left
+		aae) Right
+	ab)	Human(P1) vs Human(P2)
+		GAME STARTS
+	ac)	AI vs AI
+		GAME STARTS
+b) Options
+	ba) Game speed (radio buttons):
+		baa) Slow
+		bab) Normal
+		bac) Fast (default value)
+c) Credits
+	Game was created by passionate developer Mateusz Kilan blah blah blah...
+d) Exit Game
+	GAME QUITS
+
+Menu items placing (in pixels):
+When we talk about placing particular asset in the window we placing it by providing its center point, also I will provide here all assets width and height:
+
+Common bitmaps:
+	a. BlackBackground.bmp - 640 x 480 - Vc(0, 0), Vm(320, 240)
+	b. MenuCopyrights.bmp - 224 x 21 - Vc(208, 406), Vm(320, 417)
+	c. MenuFrame.bmp - 640 x 480 - Vc(0, 0), Vm(320, 240)
+	d. ThePongGameLogo.bmp - 250 x 70 - Vc(195, 51), Vm(320, 86)
+	e. MenuItemBack.bmp & MenuItemBackActive.bmp - 227 x 30 - Vc(207, 176), Vm(321, 191)
+    f. F1HowToPlayHint.bmp - 133 x 18 - Vc(254, 126), Vm(321, 135)
+
+1. Main Menu View
+	a. MenuItemNewGame.bmp & MenuItemNewGameActive.bmp - 227 x 30 - Vc(207, 176), Vm(321, 191)
+	b. MenuItemOptions.bmp & MenuItemOptionsActive.bmp - 227 x 30 - Vc(207, 220), Vm(321, 235)
+	c. MenuItemCredits.bmp & MenuItemCreditsActive.bmp - 227 x 30 - Vc(207, 264), Vm(321, 279)
+	d. MenuItemExitGame.bmp & MenuItemExitGameActive.bmp - 227 x 30 - Vc(207, 307), Vm(321, 322)
+
+1.1 New Game View
+	a. MenuItemAIvsAI.bmp & MenuItemAIvsAIActive.bmp - 227 x 30 - Vc(207, 307), Vm(321, 322)
+	b. MenuItemP1vsAI.bmp & MenuItemP1vsAIActive.bmp - 227 x 30 - Vc(207, 220), Vm(321, 235)
+	c. MenuItemP1vsP2.bmp & MenuItemP1vsP2.bmp - 227 x 30 - Vc(207, 264), Vm(321, 279)
+
+1.1.1 AI Difficulty View
+	a. MenuItemDifficulty.bmp - 227 x 30 - Vc(207, 220), Vm(321, 235)
+	b. MenuItemEasy.bmp & MenuItemEasyActive.bmp - 227 x 30 - Vc(207, 264), Vm(321, 279)
+	c. MenuItemMedium.bmp & MenuItemMediumActive.bmp - 227 x 30 - Vc(207, 307), Vm(321, 322)
+	d. MenuItemHard.bmp & MenuItemHardActive.bmp - 227 x 30 - Vc(207, 350), Vm(321, 365)
+
+1.1.2 Choose Side View
+	a. MenuItemChooseSide.bmp - 227 x 30 - Vc(207, 220), Vm(321, 235)
+	b. MenuItemLeft & MenuItemLeftActive- 227 x 30 - Vc(207, 264), Vm(321, 279)
+	c. MenuItemRight & MenuItemRightActive - 227 x 30 - Vc(207, 307), Vm(321, 322)
+
+1.2 Options View
+	a. MenuItemGameSpeed.bmp - 227 x 30 - Vc(207, 220), Vm(321, 235)
+	b. MenuItemFast.bmp & MenuItemFastActive.bmp - 227 x 30 - Vc(207, 264), Vm(321, 279)
+	c. MenuItemNormal.bmp & MenuItemNormalActive.bmp - 227 x 30 - Vc(207, 307), Vm(321, 322)
+	d. MenuItemSlow.bmp & MenuItemSlowActive.bmp - 227 x 30 - Vc(207, 350), Vm(321, 365)
+
+1.3 Credits View
+	a. CreditsText.bmp - 545 x 126 - Vc(55, 206), Vm(328, 269)
+	b. MenuItemBack.bmp & MenuItemBackActive.bmp - 227 x 30 - Vc(207, 160), Vm(321, 175)
+
+1.4 Gameplay View
+	a. HashLine.bmp - 2 x 480 - Vc(319, 0), Vm(320, 240)
+	b. Ball.bmp - 15 x 15 - Movable object, Vc and Vm will be dinamically generated.
+	c. Racket.bmp - 15 x 100 - Movable object:
+		For P1 - Vc(0, 190), Vm(8, 240)
+		For P2 - Vc(625, 190), Vm(633, 240)
+	d. SpeedBoostPlusSign.bmp - 8 x 8 - Movable object:
+		For P1 - Vc(4, 236), Vm(8, 240)
+		For P2 - Vc(629, 236), Vm(633, 240)
+
+1.5 HowToPlay View
+	a. MenuHowToPlay.bmp - 640 x 480 - Vc(0, 0), Vm(320, 240)
+
+MENU ITEMS AND SETTING MENU ITEMS MOVE/CLICK BEHAVIOUR DESCRIPTION:
+
+Behaviour of menu items:
+1. No menu item is active and I'm moving mouse beyond and menu items.
+- Nothing should happen.
+2. No menu item is active, I'm moving mouse over menu item.
+- This menu item that I moved my mouse over to should be activated.
+3. Menu item is active and I'm moving mouse beyond any menu items.
+- Active menu item should become deactivated.
+4. Menu item is active and I move mouse over to different menu item.
+- Currently active menu item should be deactivated. New menu item that mouse is hovering over should be activated.
+5. Menu item is active and I'm moving mouse over this menu item.
+- Nothing should happen.
+
+Specific behaviour of setting menu item:
+1. When I enter screen where option should be always set, then that option's default setting menu item should be automatically activated.
+2. If I move mouse over active setting menu item, then this item should be kept active.
+3. If I move mouse over different setting menu item (which is not chosen) then both old and new setting menu items should be visible as active.
+4. If I move mouse over different setting menu item (which is not chosen) and click it, then this new setting should be chosen and activated, and old one should be deactivated.
+
+Player, AIPlayer and HumanPlayer classes description:
+What Player instance object needs to have:
+- His racket sprite
+- speed boost ready state
+- side he is playing on
+What AIPlayer needs to have:
+- difficulty level
+- functions to calculate movement (not sure of this yet though)

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8079833B-F207-47CB-B358-1FA81ED88A42}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PongGame</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="PongGameProject\Source Files\Classes\AIPlayer.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Classes\MenuItemSpriteWithoutMask.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Classes\Player.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Namespaces\AppConsts.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Namespaces\AppInitializers.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Classes\BackBuffer.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Classes\Circle.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Namespaces\GameController.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Classes\HumanPlayer.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Namespaces\MainMenuOperations.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\PongGame.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Namespaces\PuckCollisionDetection.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Classes\Sprite.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Classes\SpriteWithoutMask.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Namespaces\Test.cpp" />
+    <ClCompile Include="PongGameProject\Source Files\Classes\Vec2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="PongGameProject\Source Files\ProjectDescription.txt" />
+    <Text Include="PongGameProject\Source Files\TaskManagement.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PongGameProject\Header Files\Classes\MenuItemSpriteWithoutMask.h" />
+    <ClInclude Include="PongGameProject\Header Files\Classes\Player.h" />
+    <ClInclude Include="PongGameProject\Header Files\Namespaces\MainMenuOperations.h" />
+    <ClInclude Include="PongGameProject\Header Files\Classes\AIPlayer.h" />
+    <ClInclude Include="PongGameProject\Header Files\Namespaces\AppConsts.h" />
+    <ClInclude Include="PongGameProject\Header Files\Namespaces\AppInitializers.h" />
+    <ClInclude Include="PongGameProject\Header Files\Classes\BackBuffer.h" />
+    <ClInclude Include="PongGameProject\Header Files\Classes\Circle.h" />
+    <ClInclude Include="PongGameProject\Header Files\Namespaces\GameController.h" />
+    <ClInclude Include="PongGameProject\Header Files\Classes\HumanPlayer.h" />
+    <ClInclude Include="PongGameProject\Header Files\Namespaces\PuckCollisionDetection.h" />
+    <ClInclude Include="PongGameProject\Header Files\Classes\Sprite.h" />
+    <ClInclude Include="PongGameProject\Header Files\Classes\SpriteWithoutMask.h" />
+    <ClInclude Include="PongGameProject\Header Files\Namespaces\Test.h" />
+    <ClInclude Include="PongGameProject\Header Files\Classes\Vec2.h" />
+    <ClInclude Include="PongGameProject\Header Files\resource2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="PongGameProject\Resource Files\Ball.bmp" />
+    <Image Include="PongGameProject\Resource Files\BlackBackground.bmp" />
+    <Image Include="PongGameProject\Resource Files\CreditsText.bmp" />
+    <Image Include="PongGameProject\Resource Files\F1HowToPlay.bmp" />
+    <Image Include="PongGameProject\Resource Files\HashLine.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuCopyrights.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuFrame.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuHowToPlay.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemAIDifficulty.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemAIvsAI.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemAIvsAIActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemBack.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemBackActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemChooseSide.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemCredits.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemCreditsActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemEasy.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemEasyActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemExitGame.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemExitGameActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemFast.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemFastActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemGameSpeed.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemHard.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemHardActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemLeft.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemLeftActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemMedium.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemMediumActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemNewGame.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemNewGameActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemNormal.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemNormalActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemOptions.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemOptionsActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemP1vsAI.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemP1vsAIActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemP1vsP2.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemP1vsP2Active.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemRight.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemRightActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemSlow.bmp" />
+    <Image Include="PongGameProject\Resource Files\MenuItemSlowActive.bmp" />
+    <Image Include="PongGameProject\Resource Files\Racket.bmp" />
+    <Image Include="PongGameProject\Resource Files\SpeedBoostPlusSign.bmp" />
+    <Image Include="PongGameProject\Resource Files\ThePongGameLogo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PongGameProject\Resource Files\PongGame.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,95 @@
+Muszê pamiêtaæ o:
+1. Przetestuj jak najwiêcej swojej funkcjonalnoœci jak tylko siê da.
+
+Rzeczy do zrobienia:
+
+1. Kiedy dana gra siê zakoñczy trzeba bêdzie zresetowaæ odpowiednie ustawienia.
+
+2. Wyczyœciæ pamiêæ RAM, gdy program jest wy³¹czany.
+
+3. W GIMP'ie zrobiæ:
+
++ 1) sprite pi³ki,
+
++ 2) sprite paletek,
+
++ 3) sprite linii œrodkowej, 
+
++ 4) sprite menu pauzy,
+Trzeba zaprojektowaæ w GIMP'ie sprite menu pauzy w trakcie gry, powinny sie tam znalezc nastepujace rzeczy:
+Menu item'y:
+a) Continue
+b) Restart
+c) Options
+d) Main Menu
+e) Exit Game
+Menu to aktywowaæ siê powinno po wciœniêciu przycisku "escape". Ponowne wciœniêcie tego przycisku powoduje odpalenie opcji "Continue".
+Menu Pauzy bêdzie siê nak³ada³o na pole gry, a jak siê menu pauzy wy³¹czy to program jeszcze raz narysuje aktualny stan pola gry i tyle.
+
++ 5) sprite'y informacji o wygranej.
+Sprite'y informacji o wygranej bêd¹ dwa, jednej sprite bêdzie na po³owie gracza, który wygra³ a drugi na po³owie gracza który przegra³.
+Gracz, który wygra³ dostanie informacjê "You won!". Gracz, który przegra³ natomiast dostanie informacjê "You lost".
+Sprite'y do tego ju¿ zrobi³em, ale myœlê nad tym, ¿eby zrobiæ zamiast tych "You won!" i "You lost", nowy screen z podsumowaniem wyniku i opcjami:
+a) Play Again
+b) Options
+c) Main Menu
+d) Exit Game
+I wydaje mi siê, ¿e bêdzie to super opcja. 
+Najlepiej wyœwietliæ tego sprite tylko na danym ma³ym obszarze, zeby gracz odnosil caly czas wrazenie , ze jest w trakcie gry a nie w menu.
+Byc moze cos takiego bedzie zachecac graczy do dalszej gry. Oprocz tego, wazne jest aby pokazac jak najwiecej funkcjonalnosci w tym programie.
+Dodatkowo ma byc wyswietlany tekst final score z opisem ile kto mail punktow i kto wygral.
+
++ 6) sprite aktualnego wyniku
+(pokazywany bêdzie po ka¿dym zdobytym punkcie na samej górze pola gry, wyœwietlany bêdzie na maks 2 sekundy ale zapewne lepiej na 1 sekunde, jeszcze zobaczymy jak to wyjdzie w praniu.
+
++ 7) Zaprojektowaæ sprite "How To Play" odpalaj¹cy siê pod klawiszem F1, który wyt³umaczy po krótce zasady grania w grê. Bêdzie mo¿liwoœæ odpalenia "How To Play" w trakcie rozgrywki.
+W zaleznoœci od tego co zdecydujê siê zaimplementowaæ w podpunkcie 8 jako wskaznik gotowego speed boost'a to bêdê musia³ odpowiednio zupdatowaæ menu "How To Play".
+Dodaæ informacjê o tym, ¿e "escape" odpala menu w trakie gry.
+
++ 8) Zaprojektowaæ sprite z poszczególnymi etapami ³adowania siê Speed Boost'a. Jezeli speed boost jest gotowy to na paletce powinien pojawic siê +, jezeli speed boost nie jest gotowy
+na paletce nic nie powinno sie pojawic.
+
+4. Zaprojektowaæ i napisaæ algorytm sztucznej inteligencji + testy
+
+5. Zaprojektowaæ i napisaæ algorytm odbijania pi³ki + testy. Mogê bazowaæ na algorytmie napisanym dla animacji, ale muszê pamiêtaæ o tym, ¿e teraz pi³eczka MUSI siê poruszaæ
+p³ynnie i równie¿ musi przyspieszaæ w zale¿noœci od tego w któr¹ czêœæ paletki uderzy. Prêdkoœæ pi³ki bêdzie wiêc zmienna i mo¿e znacznie przyspieszyæ w trakcie rozgrywki.
+Dodatkowo opcja prêdkoœci gry bêdzie modyfikatorem prêdkoœci pi³ki. Trzy tryby prêdkoœci gwarantuj¹ mo¿liwoœæ pouczenia siê gry i dostêpnoœæ dla m³odszych odbiorców.
+
+6. Muszê siê zastanowiæ gdzie wyœwietlany bêdzie aktualny wynik w trakcie rozgrywki. Pierwszy pomys³ mam taki, aby robiæ to w caption okna, obok fps'ów. Warto siê zastanowiæ
+czy nie lepiej bêdzie skasowaæ wyœwietlanie klatek na sekundê. Dodatkowo wynik ma byc wyswietlany na samej górze pola gry na sekunde/dwie po zdobyciu punktu, przez ktoregoœ z graczy.
+
++ 7. Musze wymyœliæ zasady rozgrywki, do ilu bêdzie siê graæ zanim siê wygra? Mój pierwszy pomys³ jest taki, ¿eby graæ do 10ciu.
+
+8. Muszê siê zastanowiæ jak szybko bazowo bêd¹ poruszaæ siê paletki i jak szybko poruszaæ siê bêdzie pi³ka
+
+9. Zastanów siê czy warto dodaæ tryb dodatkowej szybkoœci dla paletek. W taki sposób, ¿e standardowo porusza siê w góre i w dó³ przy pomocy klawiszy "W" i "S" ale istnieje mo¿liwoœæ "boost'a" 
+czyli przyspieszenia paletki dodatkowo przy pomocy spacji. Zabieg ten skomplikuje dodatkowo rozgrywkê i sprawi, ¿e bêdzie siê gra³o ciekawiej, tym bardziej ze standardowo paletka powinna poruszaæ siê
+stosunkowo wolno przy pomocy tylko klawiszy "W" i "S". Zastanowiæ siê jak ten speed boost mia³by dzia³aæ, istniej¹ dwa scenariusze:
+- Trzeba trzymaæ klawisz speed boost'a i wtedy W i S szybiciej przemieszczaj¹ paletkê
+- Po naciœniêciu speed boost'a mamy 2 sekundy szybkiego poruszania siê paletki, speed boost odnawia siê 2-5 sekund.
+
+10. Kolejna modyfikacja dotyczy mo¿liwoœci skoku paletki do "góry". To wydaje siê byæ trochê œmieszne, ale mog³oby dodatkowo zmodyfikowaæ rozgrywkê.
+
+11. Je¿eli ktoœ bêdzie gra³ solo, to zarówno "W" i "S" jak i "Up" i "Down" bêd¹ mog³y s³u¿yæ do poruszania paletk¹, nie robi ró¿nicy jakie mo¿liwe kombinacje zastosujemy do sterowania paletkami.
+
++ 12. Zrefaktorowaæ metody rysuj¹ce Sprite'ów w programie.
+
+13. WZI¥Æ POD ROZWAGE - co jezeli gra sie skonczy, bedzie sekunda oczekiwania na menu konca gry i wtedy ktos wcisnie klawisz F1? Jezeli nie uwzglednie tego wyjatku gra moze sie Ÿle narysowaæ.
+
++ 14. Po klikniêciu którychœ z trybów gry rysujê pole gry
+
+Pytania:
+a) Czy tworzyc osobne nazwy klas dla graczy AI i prawdziwych.
+b) Czy moze stworzyæ polimorficzne klasy HumanPlayer i AIPlayer implementujace interface klasy Player. Moglbym wtedy sobie upcastowaæ klasy i przechowywac je w tych samych kontenerach. 
+c) Czy moze stworzyc jedna klase z opcjonalnym pointerem do instancji klasy AI.
+
+Co muszê dodaæ?
++ bitmapy rakietek
++ bitmape czarnego t³a
++ bitmapy speed boosta
++ bitmapy przerywanej linii
++ bitmapê pi³ki
+
++ 15. Dodanie menu "how to play" pod F1.
+
++ 16. Dodanie hint'a "F1 - How to play" do sekcji common menu items
