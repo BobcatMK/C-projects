@@ -27,3 +27,6 @@ jest to symulacja odbijającej się piłki, do zbudowania projektu potrzebna jes
 
 - **_Open File Dialog_**
 jest to prymitywny edytor plików tekstowych, umożliwia nam załadowanie pliku o rozszerzeniu .txt jego edycję i zapisanie. Do zbudowania projektu potrzebna jest obsługa i dostęp do API Windows'a
+
+- **_The Pong Game (work in progress)_**
+gra dla jednego lub dwóch graczy polegająca na odbijaniu lecącej w stronę gracza piłki. Projekt jest w trakcie tworzenia.
