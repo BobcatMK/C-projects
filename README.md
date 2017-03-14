@@ -1,32 +1,32 @@
-# Opis repozytorium
+# Repositorium description
 
 **1. Standard API Projects**
 
-Każdy poniższy projekt pisany był na Linuxie, posiada makefile.sh, który używałem do budowania i odpalania projektu. Korzystałem z kompilatora clang++ w wersji 3.7.
+All projects listed below were written on Linux and have makefile.sh bash script included. Makefile.sh was used for building and running projects. I used clang++ compiler version 3.7.
 
-Poniższe projekty często korzystają z dwóch innych projektów tj "test_class" i "helpers", dlatego polecam nie rozdzielać projektów.
+Projects listed below very often have dependencies to two other projects, it is "test_class" and "helpers", that is why I recommend not separating these projects.
 
-To repozytorium posiada następujące programy:
+This repositorium includes following programs:
 
-- **_algorithms_**: implementacja algorytmów działających na funktorach
-- **_array\_with\_templates_**: implementacja tablicy bez testów ale za to z przykładowym użyciem
-- **_employee\_database\_program_**: Program imitujący prymitywną bazę danych. Za bazę danych robi plik tekstowy. Strukturę zapisanych danych można poznać czytając przykładowy plik tekstowy zawarty w tym projekcie lub czytając kod bezpośrednio.
-- **_helpers_**: zestaw 3 makr importowanych przez większość zawartych tu programów
-- **_linked\_list\_two_way_**: implementacja dwukierunkowej listy wraz z testami
-- **_matrices\_adding\_program_**: prosty program dodający do siebie dwie dowolne macierze
-- **_queue_**: implementacja kolejki wraz z testami
-- **_stack_**: implementacja stosu wraz z testami
-- **_test\_class_**: klasa importowana przez powyższe projekty, służy do tworzenia testów jednostkowych.
+- **_algorithms_**: implementation of algorithms using functors
+- **_array\_with\_templates_**: implementation of array without tests but with exemplary use case
+- **_employee\_database\_program_**: Program imitating primitive database. Text file serves as database. You can learn the database structure by reading the exemplary text file includes inside the project or by reading source code directly.
+- **_helpers_**: set of 3 macros imported by majority of programs included here
+- **_linked\_list\_two_way_**: implementation of two way linked list with tests
+- **_matrices\_adding\_program_**: simple program that adds two matrices together
+- **_queue_**: implementation of queue with tests
+- **_stack_**: implementation of stack with tests
+- **_test\_class_**: class imported by all above projects, it is used for unit testing (yes, I know it is actually namespace :)).
 
 **2. Windows API Projects**
 
-Ta część repozytorium posiada dwa programy napisane w Visual Studio Community 2015:
+This part of the repositorium has three programs written using Visual Studio Community 2015:
 
 - **_Bouncing Ball Simulation_**
-jest to symulacja odbijającej się piłki, do zbudowania projektu potrzebna jest obsługa i dostęp do API Windows'a
+It's simulation of boucing ball, to build this project you need access to Windows API.
 
 - **_Open File Dialog_**
-jest to prymitywny edytor plików tekstowych, umożliwia nam załadowanie pliku o rozszerzeniu .txt jego edycję i zapisanie. Do zbudowania projektu potrzebna jest obsługa i dostęp do API Windows'a
+this is a primitive text editor, it allows user to load files with .txt extension, edit them and save them. To build this project you need to have access to Windows API
 
-- **_The Pong Game (work in progress)_**
-gra dla jednego lub dwóch graczy polegająca na odbijaniu lecącej w stronę gracza piłki. Projekt jest w trakcie tworzenia.
+- **_The Pong Game (prace w toku)_**
+game for single or two players. Player's role is to bounce back the incoming ball using paddle. Project's status is work in progress.
