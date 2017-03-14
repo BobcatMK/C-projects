@@ -10,7 +10,7 @@ This repositorium includes following programs:
 
 - **_algorithms_**: implementation of algorithms using functors
 - **_array\_with\_templates_**: implementation of array without tests but with exemplary use case
-- **_employee\_database\_program_**: Program imitating primitive database. Text file serves as database. You can learn the database structure by reading the exemplary text file includes inside the project or by reading source code directly.
+- **_employee\_database\_program_**: Program imitating primitive database. Text file serves as database. You can learn the database structure by reading the exemplary text file included inside the project or by reading source code directly.
 - **_helpers_**: set of 3 macros imported by majority of programs included here
 - **_linked\_list\_two_way_**: implementation of two way linked list with tests
 - **_matrices\_adding\_program_**: simple program that adds two matrices together
@@ -28,5 +28,5 @@ It's simulation of boucing ball, to build this project you need access to Window
 - **_Open File Dialog_**
 this is a primitive text editor, it allows user to load files with .txt extension, edit them and save them. To build this project you need to have access to Windows API
 
-- **_The Pong Game (prace w toku)_**
+- **_The Pong Game (work in progress)_**
 game for single or two players. Player's role is to bounce back the incoming ball using paddle. Project's status is work in progress.
