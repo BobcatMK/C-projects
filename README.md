@@ -1,4 +1,4 @@
-# Repositorium description
+# repository description
 
 **1. Standard API Projects**
 
@@ -6,7 +6,7 @@ All projects listed below were written on Linux and have makefile.sh bash script
 
 Projects listed below very often have dependencies to two other projects, it is "test_class" and "helpers", that is why I recommend not separating these projects.
 
-This repositorium includes following programs:
+This repository includes following programs:
 
 - **_algorithms_**: implementation of algorithms using functors
 - **_array\_with\_templates_**: implementation of array without tests but with exemplary use case
@@ -20,7 +20,7 @@ This repositorium includes following programs:
 
 **2. Windows API Projects**
 
-This part of the repositorium has three programs written using Visual Studio Community 2015:
+This part of the repository has three programs written using Visual Studio Community 2015:
 
 - **_Bouncing Ball Simulation_**
 It's simulation of boucing ball, to build this project you need access to Windows API.
