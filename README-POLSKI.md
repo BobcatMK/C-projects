@@ -20,7 +20,7 @@ To repozytorium posiada następujące programy:
 
 **2. Windows API Projects**
 
-Ta część repozytorium posiada dwa programy napisane w Visual Studio Community 2015:
+Ta część repozytorium posiada trzy programy napisane w Visual Studio Community 2015:
 
 - **_Bouncing Ball Simulation_**
 jest to symulacja odbijającej się piłki, do zbudowania projektu potrzebna jest obsługa i dostęp do API Windows'a
