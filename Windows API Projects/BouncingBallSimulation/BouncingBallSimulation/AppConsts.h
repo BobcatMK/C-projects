@@ -13,13 +13,13 @@ namespace AppConsts {
 	extern const int gWindowHeight;
 	extern const int SleepTimeInMs;	
 
-	extern const float gVerySlowRatio;
-	extern const float gSlowRatio;
-	extern const float gNormalRatio;
-	extern const float gFastRatio;
-	extern const float gVeryFastRatio;
+	extern const double gVerySlowRatio;
+	extern const double gSlowRatio;
+	extern const double gNormalRatio;
+	extern const double gFastRatio;
+	extern const double gVeryFastRatio;
 
-	extern const float gMovePerFrameRatio;
+	extern const double gMovePerFrameRatio;
 
 	// velocity vector data for ball
 	// I'm not using vMaxX or vMaxY variables due to the way rand works

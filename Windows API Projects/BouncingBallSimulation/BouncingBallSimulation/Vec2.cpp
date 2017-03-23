@@ -10,18 +10,18 @@ Vec2::Vec2()
 {
 }
 
-Vec2::Vec2(float s, float t)
+Vec2::Vec2(double s, double t)
 : x(s), y(t)
 {
 }
 
-Vec2::Vec2(float d[2])
+Vec2::Vec2(double d[2])
 : x(d[0]), y(d[1])
 {
 }
 
 Vec2::Vec2(const POINT& p)
-: x((float)p.x), y((float)p.y)
+: x((double)p.x), y((double)p.y)
 {
 }
 
@@ -70,20 +70,20 @@ void Vec2::operator-=(const Vec2& rhs)
 	y -= rhs.y;
 }
 
-void Vec2::operator*=(float s)
+void Vec2::operator*=(double s)
 {
 	x *= s;
 	y *= s;
 }
 
-void Vec2::operator/=(float s)
+void Vec2::operator/=(double s)
 {
 	// Assumes s != 0.
 	s /= s;
 	y /= s;
 }
 
-float Vec2::length()
+double Vec2::length()
 {
 	return sqrtf(x*x + y*y);
 }
@@ -91,7 +91,7 @@ float Vec2::length()
 Vec2& Vec2::normalize()
 {
 	// Assumes len != 0.
-	float len = length();
+	double len = length();
 
 	x /= len;
 	y /= len;
@@ -99,7 +99,7 @@ Vec2& Vec2::normalize()
 	return *this;
 }
 
-float Vec2::dot(const Vec2& rhs)
+double Vec2::dot(const Vec2& rhs)
 {
 	return x*rhs.x + y*rhs.y;
 }
@@ -111,7 +111,7 @@ Vec2& Vec2::reflect(const Vec2& normal)
 	return *this = 2.0f * -I.dot(normal) * normal + I;
 }
 
-Vec2 operator*(const Vec2& v, float s)
+Vec2 operator*(const Vec2& v, double s)
 {
 	Vec2 result;
 
@@ -121,7 +121,7 @@ Vec2 operator*(const Vec2& v, float s)
 	return result;
 }
 
-Vec2 operator*(float s, const Vec2& v)
+Vec2 operator*(double s, const Vec2& v)
 {
 	Vec2 result;
 
@@ -131,7 +131,7 @@ Vec2 operator*(float s, const Vec2& v)
 	return result;
 }
 
-Vec2 operator/(const Vec2& v, float s)
+Vec2 operator/(const Vec2& v, double s)
 {
 	Vec2 result;
 
@@ -142,7 +142,7 @@ Vec2 operator/(const Vec2& v, float s)
 	return result;
 }
 
-Vec2 operator/(float s, const Vec2& v)
+Vec2 operator/(double s, const Vec2& v)
 {
 	Vec2 result;
 

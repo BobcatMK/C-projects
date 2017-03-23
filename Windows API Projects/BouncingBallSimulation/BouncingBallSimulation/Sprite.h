@@ -20,7 +20,7 @@ public:
 	int width();
 	int height();
 
-	void update(float dt);
+	void update(double dt);
 	void draw(HDC hBackBufferDC, HDC hSpriteDC);
 
 public:

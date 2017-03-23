@@ -9,7 +9,7 @@ Circle::Circle()
 {
 }
 
-Circle::Circle(float R, const Vec2& center)
+Circle::Circle(double R, const Vec2& center)
 : r(R), c(center)
 {
 }

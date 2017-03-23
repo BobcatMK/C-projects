@@ -4,15 +4,16 @@ void Logic::RunSimulation() {
 	using namespace AppInitializers;
 	using namespace AppConsts;
 
-	currentTime = (float)timeGetTime();
-	deltaTime = (currentTime - lastTime) * 0.001f;
+    QueryPerformanceCounter((LARGE_INTEGER*)&timeCount);
+    currentTimeInSeconds = (double)timeCount * timeScaleSeconds;
+    deltaTimeInSeconds = currentTimeInSeconds - lastTimeInSeconds;
 
 	if (wasMenuOperationEvent) {
-		deltaTime = 0.0f;
+        deltaTimeInSeconds = 0.0;
 		wasMenuOperationEvent = false;
 	}
 	// this function below does all the calculation magic
-	GDISpriteCollision::runDetection(deltaTime);
+    GDISpriteCollision::runDetection(deltaTimeInSeconds);
 
 	// draw object onto BackBuffer
 	gBackground->draw(gBackBuffer->getDC(), ghSpriteDC);
@@ -25,7 +26,8 @@ void Logic::RunSimulation() {
 	gBackBuffer->present();
 
 	// update time
-	lastTime = currentTime;
+	//lastTime = currentTime;
+    lastTimeInSeconds = currentTimeInSeconds;
 
 	// give windows time to do his own operations between game loop iterations
 	Sleep(AppConsts::SleepTimeInMs);
@@ -33,11 +35,12 @@ void Logic::RunSimulation() {
 
 void Logic::DrawFPS() {
 	static int frameCnt = 0;
-	static float timeElapsed = 0;
+	static double timeElapsed = 0;
 	static wchar_t buffer[256];
 
 	++frameCnt;
-	timeElapsed += AppInitializers::deltaTime;
+	//timeElapsed += AppInitializers::deltaTime;
+    timeElapsed += AppInitializers::deltaTimeInSeconds;
 
 	if (timeElapsed < 1.0f) return;
 
@@ -145,11 +148,11 @@ LRESULT CALLBACK Logic::MainWndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM l
 	return DefWindowProc(hWnd, msg, wParam, lParam);
 };
 
-void Logic::SetInitialVec2(float ratio) {
+void Logic::SetInitialVec2(double ratio) {
 	using namespace AppInitializers;
 
-	float& xVel = gBall->mVelocity.x;
-	float& yVel = gBall->mVelocity.y;
+	double& xVel = gBall->mVelocity.x;
+	double& yVel = gBall->mVelocity.y;
 
 	xVel = (xVel > 0.0f ? std::abs(initialVelVector.x) : -std::abs(initialVelVector.x));
 	yVel = (yVel > 0.0f ? std::abs(initialVelVector.y) : -std::abs(initialVelVector.y));

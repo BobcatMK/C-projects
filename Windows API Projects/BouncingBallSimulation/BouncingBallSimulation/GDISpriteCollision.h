@@ -7,9 +7,9 @@
 #include "cmath"
 
 namespace GDISpriteCollision {
-	extern void runDetection(float dt);
+	extern void runDetection(double dt);
 	extern AppConsts::collisionSides _probableCollisionSides();
-	extern void _reverseVelVec(float& colOneT, float& colTwoT);
-	extern void _calculateCollision(AppConsts::collisionSides& collision, float& dt);
+	extern void _reverseVelVec(double& colOneT, double& colTwoT);
+	extern void _calculateCollision(AppConsts::collisionSides& collision, double& dt);
 }
 #endif

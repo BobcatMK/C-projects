@@ -1,28 +1,28 @@
 #include "GDISpriteCollision.h"
 
 namespace GDISpriteCollision {
-	void runDetection(float dt) {
+	void runDetection(double dt) {
 		while (dt != 0.0f) {
 			AppConsts::collisionSides collision = _probableCollisionSides();
 			_calculateCollision(collision, dt);
 		}
 	}
 
-	void _calculateCollision(AppConsts::collisionSides& collision, float& dt) {
+	void _calculateCollision(AppConsts::collisionSides& collision, double& dt) {
 		using namespace AppConsts;
 		using namespace AppInitializers;
 
-		float colOneT = 0.0f;
-		float colTwoT = 0.0f;
-		float timeToCollision = 0.0f;
+		double colOneT = 0.0f;
+		double colTwoT = 0.0f;
+		double timeToCollision = 0.0f;
 		Vec2& ballPos = gBall->mPosition;
 		Vec2& ballVel = gBall->mVelocity;
 
 		switch (collision) {
 		case collisionSides::BOTTOM_AND_RIGHT:
 			// what if ballVel.x or y is equal to 0 ? In this case it can't be. If it was it would landed in different case scenario.
-			colOneT = ((float)bottomBorder - ballPos.y) / ballVel.y; // bottom collision time
-			colTwoT = ((float)rightBorder - ballPos.x) / ballVel.x; // right collision time
+			colOneT = ((double)bottomBorder - ballPos.y) / ballVel.y; // bottom collision time
+			colTwoT = ((double)rightBorder - ballPos.x) / ballVel.x; // right collision time
 			timeToCollision = (colOneT < colTwoT ? colOneT : colTwoT);
 
 			if (dt > timeToCollision) {
@@ -39,8 +39,8 @@ namespace GDISpriteCollision {
 			dt = 0.0f;
 			break;
 		case collisionSides::TOP_AND_RIGHT:
-			colOneT = std::abs((ballPos.y - (float)topBorder) / ballVel.y); // top collision time
-			colTwoT = ((float)rightBorder - ballPos.x) / ballVel.x; // right collision time
+			colOneT = std::abs((ballPos.y - (double)topBorder) / ballVel.y); // top collision time
+			colTwoT = ((double)rightBorder - ballPos.x) / ballVel.x; // right collision time
 			timeToCollision = (colOneT < colTwoT ? colOneT : colTwoT);
 			
 			if (dt > timeToCollision) {
@@ -56,7 +56,7 @@ namespace GDISpriteCollision {
 			dt = 0.0f;
 			break;
 		case collisionSides::RIGHT:
-			colTwoT = ((float)rightBorder - ballPos.x) / ballVel.x; // right collision time
+			colTwoT = ((double)rightBorder - ballPos.x) / ballVel.x; // right collision time
 			
 			if (dt > colTwoT) {
 				dt -= colTwoT;
@@ -69,8 +69,8 @@ namespace GDISpriteCollision {
 			dt = 0.0f;
 			break;
 		case collisionSides::BOTTOM_AND_LEFT:
-			colOneT = ((float)bottomBorder - ballPos.y) / ballVel.y; // bottom collision time
-			colTwoT = (ballPos.x - (float)leftBorder) / std::abs(ballVel.x); // left collision time
+			colOneT = ((double)bottomBorder - ballPos.y) / ballVel.y; // bottom collision time
+			colTwoT = (ballPos.x - (double)leftBorder) / std::abs(ballVel.x); // left collision time
 			timeToCollision = (colOneT < colTwoT ? colOneT : colTwoT);
 
 			if (dt > timeToCollision) {
@@ -86,8 +86,8 @@ namespace GDISpriteCollision {
 			dt = 0.0f;
 			break;
 		case collisionSides::TOP_AND_LEFT:
-			colOneT = std::abs((ballPos.y - (float)topBorder) / ballVel.y); // top collision time
-			colTwoT = (ballPos.x - (float)leftBorder) / std::abs(ballVel.x); // left collision time
+			colOneT = std::abs((ballPos.y - (double)topBorder) / ballVel.y); // top collision time
+			colTwoT = (ballPos.x - (double)leftBorder) / std::abs(ballVel.x); // left collision time
 			timeToCollision = (colOneT < colTwoT ? colOneT : colTwoT);
 
 			if (dt > timeToCollision) {
@@ -103,7 +103,7 @@ namespace GDISpriteCollision {
 			dt = 0.0f;
 			break;
 		case collisionSides::LEFT:
-			colTwoT = (ballPos.x - (float)leftBorder) / std::abs(ballVel.x); // left collision time
+			colTwoT = (ballPos.x - (double)leftBorder) / std::abs(ballVel.x); // left collision time
 
 			if (dt > colTwoT) {
 				dt -= colTwoT;
@@ -116,7 +116,7 @@ namespace GDISpriteCollision {
 			dt = 0.0f;
 			break;
 		case collisionSides::BOTTOM:
-			colOneT = ((float)bottomBorder - ballPos.y) / ballVel.y; // bottom collision time
+			colOneT = ((double)bottomBorder - ballPos.y) / ballVel.y; // bottom collision time
 
 			if (dt > colOneT) {
 				dt -= colOneT;
@@ -129,7 +129,7 @@ namespace GDISpriteCollision {
 			dt = 0.0f;
 			break;
 		case collisionSides::TOP:
-			colOneT = std::abs((ballPos.y - (float)topBorder) / ballVel.y); // top collision time
+			colOneT = std::abs((ballPos.y - (double)topBorder) / ballVel.y); // top collision time
 
 			if (dt > colOneT) {
 				dt -= colOneT;
@@ -147,7 +147,7 @@ namespace GDISpriteCollision {
 		}
 	}
 
-	void _reverseVelVec(float& colOneT, float& colTwoT) {
+	void _reverseVelVec(double& colOneT, double& colTwoT) {
 		using namespace AppInitializers;
 		if (colOneT < colTwoT) {
 			gBall->mVelocity.y = -gBall->mVelocity.y;

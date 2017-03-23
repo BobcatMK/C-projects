@@ -12,9 +12,18 @@ namespace AppInitializers {
 
 	Vec2 initialVelVector{};
 
-	float lastTime = 0.0f;
-	float currentTime = 0.0f;
-	float deltaTime = 0.0f;
+    
+    
+    //__int64 lastTimeCount = 0;
+    //__int64 currentTimeCount = 0;
+    double timeScaleSeconds = 0.0;
+    __int64 timeCount = 0;
+    double lastTimeInSeconds = 0;
+    double currentTimeInSeconds = 0;
+    double deltaTimeInSeconds = 0;
+	//double lastTime = 0.0f;
+	//double currentTime = 0.0f;
+	//double deltaTime = 0.0f;
 
 	bool wasMenuOperationEvent = false;
 

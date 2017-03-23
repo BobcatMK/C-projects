@@ -19,9 +19,15 @@ namespace AppInitializers {
 
 	extern bool wasMenuOperationEvent;
 
-	extern float lastTime;
-	extern float currentTime;
-	extern float deltaTime;
+    extern double timeScaleSeconds;
+    extern __int64 timeCount;
+    extern double lastTimeInSeconds;
+    extern double currentTimeInSeconds;
+    extern double deltaTimeInSeconds;
+
+	//extern double lastTime;
+	//extern double currentTime;
+	//extern double deltaTime;
 
 	extern int leftBorder;
 	extern int rightBorder;

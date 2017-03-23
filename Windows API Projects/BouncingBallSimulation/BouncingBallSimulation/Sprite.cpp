@@ -45,7 +45,7 @@ int Sprite::height()
 	return mImageBM.bmHeight;
 }
 
-void Sprite::update(float dt)
+void Sprite::update(double dt)
 {
 	// Update the sprites position.
 	mPosition += mVelocity * dt;

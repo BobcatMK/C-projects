@@ -17,7 +17,7 @@ namespace Logic {
 	Vec2 GetRandVec2(int startX, int rangeX, int startY, int rangeY, bool shouldRandSign);
 	Vec2 CountPositionVec2();
 	bool InitMainWnd();
-	void SetInitialVec2(float ratio);
+	void SetInitialVec2(double ratio);
 	LRESULT CALLBACK MainWndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 }
 #endif
