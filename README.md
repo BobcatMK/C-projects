@@ -28,5 +28,3 @@ It's simulation of boucing ball, to build this project you need access to Window
 - **_Open File Dialog_**
 this is a primitive text editor, it allows user to load files with .txt extension, edit them and save them. To build this project you need to have access to Windows API
 
-- **_The Pong Game (work in progress)_**
-game for single or two players. Player's role is to bounce back the incoming ball using paddle. Project's status is work in progress.
